@@ -40,7 +40,7 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateUser(@PathVariable UUID id, @RequestBody UserRequestDTO request) {
+    public ResponseEntity<?> updateUser(@PathVariable UUID id, @RequestBody @Valid UserRequestDTO request) {
         return JsonResponse.ok(userService.updateUser(id, request));
     }
 

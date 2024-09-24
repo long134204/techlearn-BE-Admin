@@ -12,3 +12,15 @@ CREATE TABLE tbl_user
     is_deleted    BIT(1)       NULL,
     CONSTRAINT pk_tbl_user PRIMARY KEY (id)
 );
+CREATE TABLE tbl_teacher
+(
+    id BINARY(16) PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    color VARCHAR(7),
+    avatar VARCHAR(255),
+    created_by VARCHAR(255),
+    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modified_by VARCHAR(255),
+    modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    is_deleted    BIT(1)       NULL
+);

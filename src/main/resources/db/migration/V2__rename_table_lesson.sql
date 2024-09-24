@@ -1,0 +1,1 @@
+RENAME TABLE tbl_lesstion TO tbl_lesson;
