@@ -28,5 +28,7 @@ public interface LessonRepository extends JpaRepository<LessonEntity, Long> {
 
     List<LessonEntity> findAllByType(TypeLesson type);
 
+    Page<LessonEntity> findAllByOrderByLessonOrderAsc(Pageable pageable);
+
 }
 
