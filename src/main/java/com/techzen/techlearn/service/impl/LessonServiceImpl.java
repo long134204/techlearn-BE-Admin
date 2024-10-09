@@ -117,7 +117,7 @@ public class LessonServiceImpl implements LessonService {
     @Override
     public PageResponse<?> getAllLesson(int page, int pageSize) {
         Pageable pageable = PageRequest.of(page > 0 ? page - 1 : 0, pageSize);
-        Page<LessonEntity> course = lessonRepository.findAll(pageable);
+        Page<LessonEntity> course = lessonRepository.findAllByOrderByLessonOrderAsc(pageable);
         List<LessonResponseDTO> list = course.map(lessonMapper::toLessonResponseDTO)
                 .stream().collect(Collectors.toList());
         return PageResponse.builder()
