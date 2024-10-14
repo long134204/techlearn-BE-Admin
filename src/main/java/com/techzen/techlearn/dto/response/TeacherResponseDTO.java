@@ -22,4 +22,6 @@ public class TeacherResponseDTO {
     String avatar;
 
     String color;
+
+    String email;
 }
